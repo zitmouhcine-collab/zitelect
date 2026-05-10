@@ -1,0 +1,1461 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Électricien Tubize | Dépannage Urgent & Mise en Conformité RGIE | Zitelect</title>
+  <meta name="description" content="Zitelect, électricien agréé à Tubize. Dépannage électrique urgent 24h/7j, mise en conformité RGIE, rénovation électrique. Intervient à Tubize, Braine-l'Alleud, Nivelles, Bruxelles, Halle, Mons, Charleroi. Devis gratuit — 0495 15 15 09."/>
+  <meta name="keywords" content="électricien Tubize, dépannage électrique Tubize, mise en conformité RGIE, électricien Brabant wallon, électricien Bruxelles, rénovation électrique, tableau électrique, électricien urgence, certificat conformité électrique Belgique, borne recharge VE Tubize"/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Instrument+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #ffffff;
+      --navy2: #f4f9ff;
+      --blue: #e8f4ff;
+      --accent: #0ea564;
+      --accent2: #0cc97a;
+      --white: #0d2847;
+      --off: #1a3d6b;
+      --muted: #4d7a99;
+      --border: rgba(14,165,100,.15);
+      --card: rgba(14,165,100,.05);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: #ffffff;
+      color: #0d2847;
+      font-family: 'Instrument Sans', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* ── TOPBAR ─────────────────────────── */
+    .topbar {
+      background: var(--accent);
+      color: var(--navy);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2.5rem;
+      padding: .55rem 2rem;
+      font-size: .8rem;
+      font-weight: 600;
+      letter-spacing: .5px;
+      flex-wrap: wrap;
+    }
+    .topbar a { color: var(--navy); text-decoration: none; }
+    .topbar-item { display: flex; align-items: center; gap: .4rem; }
+
+    /* ── NAV ────────────────────────────── */
+    nav {
+      position: sticky; top: 0; z-index: 200;
+      background: rgba(255,255,255,.97);
+      backdrop-filter: blur(20px); box-shadow: 0 1px 20px rgba(0,0,0,.08);
+      border-bottom: 1px solid rgba(0,0,0,.08);
+      padding: 1rem 4rem;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .logo {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 1.6rem;
+      letter-spacing: -0.5px;
+      color: #0d2847;
+      display: flex;
+      align-items: center;
+      gap: 0;
+      text-decoration: none;
+    }
+    .footer-logo {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0;
+      margin-bottom: .8rem;
+      letter-spacing: -0.5px;
+      color: var(--white);
+    }
+    nav ul { list-style: none; display: flex; gap: 2rem; align-items: center; }
+    nav ul a {
+      text-decoration: none;
+      color: #4d7a99;
+      font-size: .88rem;
+      font-weight: 500;
+      letter-spacing: .3px;
+      transition: color .2s;
+    }
+    nav ul a:hover { color: #0d2847; }
+    .nav-cta {
+      background: var(--accent) !important;
+      color: var(--navy) !important;
+      padding: .55rem 1.4rem;
+      border-radius: 6px;
+      font-weight: 700 !important;
+      transition: background .2s, transform .15s !important;
+    }
+    .nav-cta:hover { background: var(--accent2) !important; transform: translateY(-1px); }
+
+    /* ── HERO ───────────────────────────── */
+    #hero {
+      min-height: 92vh;
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      align-items: center;
+      padding: 5rem 4rem 4rem;
+      position: relative;
+      overflow: hidden;
+      gap: 4rem;
+    }
+    .hero-bg {
+      position: absolute; inset: 0; pointer-events: none;
+      background:
+        radial-gradient(ellipse 70% 60% at 70% 40%, rgba(14,165,100,.07) 0%, transparent 65%),
+        radial-gradient(ellipse 40% 50% at 10% 80%, rgba(14,165,100,.04) 0%, transparent 60%);
+    }
+    /* Diagonal split */
+    .hero-bg::after {
+      content: '';
+      position: absolute;
+      right: 0; top: 0;
+      width: 48%;
+      height: 100%;
+      background: #eef6ff;
+      clip-path: polygon(8% 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    .hero-content { position: relative; z-index: 2; }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      background: rgba(34,201,122,.12);
+      border: 1px solid rgba(34,201,122,.3);
+      color: var(--accent);
+      font-size: .72rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: .38rem .9rem;
+      border-radius: 100px;
+      margin-bottom: 1.8rem;
+      animation: fadeUp .5s ease both;
+    }
+    h1 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(3rem, 5.5vw, 5.5rem);
+      line-height: .93;
+      letter-spacing: -2px;
+      margin-bottom: 1.6rem;
+      animation: fadeUp .6s ease .05s both;
+    }
+    h1 .accent { color: var(--accent); }
+    h1 .outline {
+      -webkit-text-stroke: 1.5px #0d2847;
+      color: transparent;
+    }
+    .hero-desc {
+      font-size: 1rem;
+      line-height: 1.75;
+      color: #4d7a99;
+      max-width: 480px;
+      margin-bottom: 2.5rem;
+      animation: fadeUp .6s ease .1s both;
+      font-weight: 300;
+    }
+    .hero-actions {
+      display: flex; gap: 1rem; flex-wrap: wrap;
+      animation: fadeUp .6s ease .15s both;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: var(--navy);
+      padding: .85rem 2rem;
+      font-family: 'Instrument Sans', sans-serif;
+      font-weight: 700;
+      font-size: .95rem;
+      border: none; border-radius: 8px; cursor: pointer;
+      text-decoration: none;
+      display: inline-flex; align-items: center; gap: .5rem;
+      transition: background .2s, transform .15s;
+    }
+    .btn-primary:hover { background: var(--accent2); transform: translateY(-2px); }
+    .btn-outline {
+      border: 1.5px solid rgba(13,40,71,.2);
+      color: #0d2847;
+      padding: .85rem 2rem;
+      font-family: 'Instrument Sans', sans-serif;
+      font-weight: 500;
+      font-size: .95rem;
+      border-radius: 8px; cursor: pointer;
+      text-decoration: none;
+      display: inline-flex; align-items: center; gap: .5rem;
+      transition: border-color .2s, color .2s;
+    }
+    .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* Hero right panel */
+    .hero-panel {
+      position: relative; z-index: 2;
+      animation: fadeLeft .7s ease .2s both;
+      display: flex; flex-direction: column; gap: 1.2rem;
+    }
+    .hero-card {
+      background: #f0f8f5;
+      border: 1px solid rgba(0,0,0,.08);
+      border-radius: 12px;
+      padding: 1.5rem 1.8rem;
+      backdrop-filter: blur(10px);
+    }
+    .hero-card-icon { font-size: 2rem; margin-bottom: .6rem; display: block; }
+    .hero-card h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: .3rem;
+    }
+    .hero-card p { font-size: .85rem; color: var(--muted); line-height: 1.6; }
+    .hero-card.featured {
+      border-color: rgba(14,165,100,.4);
+      background: rgba(34,201,122,.06);
+    }
+    .hero-card.featured h3 { color: var(--accent); }
+
+    /* Stats strip */
+    .stats-strip {
+      background: var(--accent);
+      padding: 1.8rem 4rem;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .stat-item { text-align: center; }
+    .stat-num {
+      font-family: 'Syne', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1;
+    }
+    .stat-label { font-size: .78rem; font-weight: 600; color: rgba(13,27,42,.65); text-transform: uppercase; letter-spacing: 1px; margin-top: .2rem; }
+    .stat-divider { width: 1px; height: 40px; background: rgba(13,27,42,.2); }
+
+    /* ── SECTIONS GENERIC ───────────────── */
+    section { padding: 6rem 4rem; }
+    .section-tag {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: .9rem;
+    }
+    .section-title {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(2rem, 3.5vw, 3.2rem);
+      line-height: 1.05;
+      letter-spacing: -1px;
+      margin-bottom: 1rem;
+    }
+    .section-sub { font-size: .95rem; color: var(--muted); line-height: 1.75; max-width: 540px; font-weight: 300; }
+
+    /* ── SERVICES ───────────────────────── */
+    #services { background: var(--navy2); }
+    .services-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3.5rem; flex-wrap: wrap; gap: 2rem; }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .service-card {
+      background: var(--card);
+      border: 1px solid rgba(0,0,0,.08);
+      border-radius: 14px;
+      padding: 2.2rem;
+      position: relative;
+      overflow: hidden;
+      transition: background .3s, border-color .3s, transform .25s;
+      cursor: default;
+    }
+    .service-card:hover {
+      background: #e8f5f1;
+      border-color: rgba(34,201,122,.3);
+      transform: translateY(-4px);
+    }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: var(--accent);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .35s ease;
+    }
+    .service-card:hover::before { transform: scaleX(1); }
+    .service-icon {
+      font-size: 2.4rem;
+      margin-bottom: 1.2rem;
+      display: block;
+      filter: drop-shadow(0 0 12px rgba(34,201,122,.2));
+    }
+    .service-name {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: .7rem;
+      letter-spacing: -.3px;
+    }
+    .service-desc { font-size: .87rem; color: var(--muted); line-height: 1.7; margin-bottom: 1.2rem; font-weight: 300; }
+    .service-list { list-style: none; display: flex; flex-direction: column; gap: .35rem; }
+    .service-list li {
+      font-size: .8rem;
+      color: #4d7a99;
+      display: flex; gap: .5rem; align-items: flex-start;
+    }
+    .service-list li::before { content: '→'; color: var(--accent); flex-shrink: 0; }
+    .service-card.featured-card {
+      background: rgba(34,201,122,.07);
+      border-color: rgba(34,201,122,.25);
+      grid-column: span 2;
+    }
+
+    /* ── ZONES ──────────────────────────── */
+    #zones {
+      background: #ffffff;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+    .zones-map {
+      background: var(--card);
+      border: 1px solid rgba(0,0,0,.08);
+      border-radius: 16px;
+      padding: 2.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .zones-map::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 50% 40%, rgba(34,201,122,.08), transparent 65%);
+    }
+    .zones-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 1.5rem;
+    }
+    .zones-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: .6rem;
+      position: relative;
+    }
+    .zone-pill {
+      background: #f0f8f5;
+      border: 1px solid rgba(0,0,0,.08);
+      border-radius: 6px;
+      padding: .5rem .8rem;
+      font-size: .82rem;
+      display: flex; align-items: center; gap: .4rem;
+      transition: background .2s, border-color .2s;
+    }
+    .zone-pill:hover { background: rgba(34,201,122,.1); border-color: rgba(34,201,122,.3); }
+    .zone-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
+    .zone-pill.main { border-color: rgba(34,201,122,.4); background: rgba(14,165,100,.08); font-weight: 600; }
+    .zones-text { }
+    .coverage-tag {
+      display: inline-block;
+      background: rgba(34,201,122,.1);
+      border: 1px solid rgba(34,201,122,.25);
+      color: var(--accent);
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: .3rem .8rem;
+      border-radius: 100px;
+      margin-bottom: 2rem;
+    }
+    .rgie-box {
+      background: rgba(34,201,122,.06);
+      border: 1px solid rgba(34,201,122,.2);
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-top: 2rem;
+    }
+    .rgie-box h4 { font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 700; color: var(--accent); margin-bottom: .5rem; }
+    .rgie-box p { font-size: .85rem; color: var(--muted); line-height: 1.65; }
+
+    /* ── POURQUOI ───────────────────────── */
+    #pourquoi { background: var(--navy2); }
+    .pourquoi-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.2rem; margin-top: 3rem; }
+    .pourquoi-card {
+      background: var(--card);
+      border: 1px solid rgba(0,0,0,.08);
+      border-radius: 12px;
+      padding: 2rem;
+      display: flex; gap: 1.2rem;
+      transition: border-color .25s, background .25s;
+    }
+    .pourquoi-card:hover { border-color: rgba(34,201,122,.3); background: rgba(14,165,100,.05); }
+    .pourquoi-icon {
+      width: 48px; height: 48px; flex-shrink: 0;
+      background: rgba(34,201,122,.12);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem;
+    }
+    .pourquoi-card h4 { font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 700; margin-bottom: .4rem; }
+    .pourquoi-card p { font-size: .85rem; color: var(--muted); line-height: 1.65; font-weight: 300; }
+
+    /* ── FAQ ────────────────────────────── */
+    #faq { background: var(--navy); }
+    .faq-wrap { max-width: 720px; margin: 3rem auto 0; display: flex; flex-direction: column; gap: .8rem; }
+    .faq-item {
+      background: var(--card);
+      border: 1px solid rgba(0,0,0,.08);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .faq-q {
+      width: 100%;
+      background: none;
+      border: none;
+      color: #0d2847;
+      font-family: 'Instrument Sans', sans-serif;
+      font-size: .95rem;
+      font-weight: 600;
+      padding: 1.3rem 1.5rem;
+      text-align: left;
+      cursor: pointer;
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+      transition: color .2s;
+    }
+    .faq-q:hover { color: var(--accent); }
+    .faq-chevron { font-size: .9rem; transition: transform .3s; flex-shrink: 0; color: var(--accent); }
+    .faq-item.open .faq-chevron { transform: rotate(180deg); }
+    .faq-a {
+      max-height: 0; overflow: hidden;
+      transition: max-height .35s ease, padding .25s;
+      padding: 0 1.5rem;
+      font-size: .88rem;
+      color: #4d7a99;
+      line-height: 1.75;
+    }
+    .faq-item.open .faq-a { max-height: 200px; padding: 0 1.5rem 1.3rem; }
+
+    /* ── AVIS GOOGLE ─────────────────────── */
+    #avis { background: var(--navy2); }
+
+    /* Score global */
+    .google-score-bar {
+      background: #f4f9ff;
+      border: 1px solid rgba(0,0,0,.08);
+      border-radius: 14px;
+      padding: 2rem 2.5rem;
+      margin-bottom: 2rem;
+    }
+    .google-logo-row {
+      display: flex; align-items: center; gap: .7rem;
+      margin-bottom: 1.5rem;
+    }
+    .google-label { font-size: .95rem; font-weight: 700; }
+    .google-verified { font-size: .75rem; color: #22c97a; background: rgba(34,201,122,.1); padding: .2rem .6rem; border-radius: 100px; margin-left: .5rem; }
+    .google-score-content { display: flex; gap: 3rem; align-items: center; flex-wrap: wrap; }
+    .score-big { text-align: center; }
+    .score-number { font-family: 'Syne', sans-serif; font-size: 3.5rem; font-weight: 800; line-height: 1; }
+    .score-stars-big { color: #22c97a; font-size: 1.4rem; letter-spacing: 2px; margin: .3rem 0; }
+    .score-count { font-size: .75rem; color: var(--muted); }
+    .score-bars { flex: 1; display: flex; flex-direction: column; gap: .5rem; min-width: 200px; }
+    .bar-row { display: flex; align-items: center; gap: .7rem; font-size: .78rem; color: var(--muted); }
+    .bar-row span:first-child { width: 28px; text-align: right; }
+    .bar-track { flex: 1; height: 6px; background: rgba(0,0,0,.08); border-radius: 3px; overflow: hidden; }
+    .bar-fill { height: 100%; background: #22c97a; border-radius: 3px; transition: width .8s ease; }
+    .bar-n { width: 20px; }
+
+    /* Carousel */
+    .avis-carousel { position: relative; overflow: hidden; }
+    .avis-track {
+      display: flex;
+      gap: 1.5rem;
+      transition: transform .4s ease;
+    }
+    .avis-card-g {
+      background: #ffffff;
+      border: 1px solid rgba(0,0,0,.08);
+      border-radius: 14px;
+      padding: 1.8rem;
+      min-width: 320px;
+      flex: 0 0 calc(33.33% - 1rem);
+      transition: border-color .25s, transform .25s;
+    }
+    .avis-card-g:hover { border-color: rgba(34,201,122,.3); transform: translateY(-3px); }
+    .avis-card-top { display: flex; align-items: center; gap: .9rem; margin-bottom: .9rem; }
+    .avis-avatar-g {
+      width: 40px; height: 40px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.1rem;
+      color: #fff; flex-shrink: 0;
+    }
+    .avis-name-g { font-size: .9rem; font-weight: 600; }
+    .avis-date-g { font-size: .73rem; color: var(--muted); margin-top: .1rem; }
+    .google-icon-sm { margin-left: auto; flex-shrink: 0; }
+    .avis-stars-g { color: #22c97a; font-size: .95rem; letter-spacing: 1px; margin-bottom: .8rem; }
+    .avis-text-g { font-size: .87rem; line-height: 1.7; color: #556b7d; font-style: italic; font-weight: 300; }
+
+    /* Carousel nav */
+    .carousel-nav { display: flex; align-items: center; justify-content: center; gap: 1rem; margin-top: 1.8rem; }
+    .carousel-btn {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: #edf7f3;
+      border: 1px solid rgba(0,0,0,.08);
+      color: #0d2847;
+      font-size: 1rem; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: background .2s, border-color .2s;
+    }
+    .carousel-btn:hover { background: rgba(34,201,122,.15); border-color: rgba(34,201,122,.4); }
+    .carousel-dots { display: flex; gap: .5rem; }
+    .dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: rgba(0,0,0,.15);
+      cursor: pointer;
+      transition: background .2s, transform .2s;
+    }
+    .dot.active { background: var(--accent); transform: scale(1.3); }
+
+    /* Google CTA btn */
+    .google-cta-btn {
+      display: inline-flex; align-items: center; gap: .6rem;
+      background: #0d2847;
+      color: #ffffff;
+      text-decoration: none;
+      padding: .7rem 1.6rem;
+      border-radius: 8px;
+      font-size: .88rem;
+      font-weight: 700;
+      transition: transform .2s, box-shadow .2s;
+      box-shadow: 0 2px 12px rgba(0,0,0,.3);
+    }
+    .google-cta-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,.4); }
+
+    /* ── CONTACT ────────────────────────── */
+    #contact {
+      background: #ffffff;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: start;
+    }
+    .contact-card {
+      background: var(--card);
+      border: 1px solid rgba(0,0,0,.08);
+      border-radius: 14px;
+      padding: 2rem;
+      display: flex; align-items: flex-start; gap: 1.2rem;
+      margin-bottom: 1rem;
+      transition: border-color .2s;
+    }
+    .contact-card:hover { border-color: rgba(34,201,122,.3); }
+    .contact-icon {
+      width: 46px; height: 46px; flex-shrink: 0;
+      background: rgba(34,201,122,.1);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem;
+    }
+    .contact-card h4 { font-family: 'Syne', sans-serif; font-size: .85rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 1px; margin-bottom: .3rem; }
+    .contact-card p { font-size: .92rem; color: var(--white); }
+    .contact-card a { color: var(--white); text-decoration: none; }
+    .contact-card a:hover { color: var(--accent); }
+    .form-group { margin-bottom: 1.2rem; }
+    .form-group label { display: block; font-size: .75rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-bottom: .45rem; }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      background: #f0f8f5;
+      border: 1.5px solid var(--border);
+      color: #0d2847;
+      padding: .8rem 1rem;
+      border-radius: 8px;
+      font-family: 'Instrument Sans', sans-serif;
+      font-size: .92rem;
+      outline: none;
+      transition: border-color .2s, background .2s;
+    }
+    .form-group input::placeholder,
+    .form-group textarea::placeholder { color: #4a5a6e; }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus { border-color: var(--accent); background: rgba(14,165,100,.05); }
+    .form-group textarea { resize: vertical; min-height: 110px; }
+    .file-upload-btn {
+      display: flex;
+      align-items: center;
+      gap: .8rem;
+      width: 100%;
+      background: #f8fcfa;
+      border: 1.5px dashed rgba(14,165,100,.4);
+      color: #0d2847;
+      padding: .85rem 1rem;
+      border-radius: 8px;
+      font-size: .92rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: border-color .2s, background .2s;
+    }
+    .file-upload-btn:hover { border-color: var(--accent); background: rgba(14,165,100,.05); }
+    .file-name { font-size: .78rem; color: var(--muted); font-weight: 400; margin-left: auto; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+    /* ── FOOTER ─────────────────────────── */
+    footer {
+      background: #f0f7ff;
+      border-top: 1px solid var(--border);
+      padding: 3rem 4rem;
+    }
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 2.5rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid rgba(0,0,0,.08);
+    }
+    .footer-logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.5rem; color: var(--white); letter-spacing: -1px; margin-bottom: .8rem; display: flex; align-items: center; gap: .5rem; }
+    .footer-logo span { color: var(--accent); }
+    .footer-desc { font-size: .85rem; color: var(--muted); line-height: 1.7; font-weight: 300; }
+    .footer-col h5 { font-family: 'Syne', sans-serif; font-size: .8rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: .55rem; }
+    .footer-col ul li { font-size: .85rem; color: var(--muted); }
+    .footer-col ul li a { color: var(--muted); text-decoration: none; transition: color .2s; }
+    .footer-col ul li a:hover { color: #0d2847; }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    .footer-bottom p { font-size: .78rem; color: #7a9ab0; }
+    .footer-cert {
+      background: rgba(34,201,122,.1);
+      border: 1px solid rgba(34,201,122,.2);
+      color: var(--accent);
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: .3rem .9rem;
+      border-radius: 100px;
+    }
+
+    /* ── FLOAT CTA ──────────────────────── */
+    .float-cta {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 999;
+      background: var(--accent);
+      color: var(--navy);
+      text-decoration: none;
+      padding: .9rem 1.6rem;
+      border-radius: 100px;
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: .88rem;
+      display: flex; align-items: center; gap: .5rem;
+      box-shadow: 0 8px 30px rgba(14,165,100,.35);
+      transition: transform .2s, box-shadow .2s;
+      animation: bounceIn .6s ease 1s both;
+    }
+    .float-cta:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(14,165,100,.45); }
+
+    /* ── PROCESSUS ──────────────────────── */
+    .process-grid {
+      display: flex;
+      align-items: flex-start;
+      gap: 0;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .process-step {
+      background: #ffffff;
+      border: 1px solid rgba(0,0,0,.08);
+      border-radius: 14px;
+      padding: 2rem 1.6rem;
+      text-align: center;
+      flex: 1;
+      min-width: 200px;
+      max-width: 240px;
+      position: relative;
+      transition: border-color .25s, transform .25s, box-shadow .25s;
+    }
+    .process-step:hover { border-color: rgba(14,165,100,.3); transform: translateY(-4px); box-shadow: 0 12px 30px rgba(14,165,100,.1); }
+    .process-num {
+      font-family: 'Syne', sans-serif;
+      font-size: .75rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      color: var(--accent);
+      margin-bottom: .5rem;
+    }
+    .process-icon { font-size: 2.2rem; margin-bottom: .9rem; display: block; }
+    .process-step h3 { font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 700; margin-bottom: .5rem; }
+    .process-step p { font-size: .82rem; color: var(--muted); line-height: 1.65; font-weight: 300; }
+    .process-arrow {
+      font-size: 1.5rem;
+      color: var(--accent);
+      align-self: center;
+      padding: 0 .5rem;
+      flex-shrink: 0;
+      opacity: .5;
+    }
+    @media (max-width: 960px) {
+      .process-arrow { display: none; }
+      .process-grid { gap: 1rem; }
+      .process-step { max-width: 100%; }
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeLeft {
+      from { opacity: 0; transform: translateX(24px); }
+      to   { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes bounceIn {
+      from { opacity: 0; transform: scale(.8) translateY(20px); }
+      to   { opacity: 1; transform: scale(1) translateY(0); }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity .6s ease, transform .6s ease;
+    }
+    .reveal.visible { opacity: 1; transform: none; }
+    .reveal-delay { transition-delay: .12s; }
+    .reveal-delay2 { transition-delay: .22s; }
+
+    /* ── RESPONSIVE ─────────────────────── */
+    @media (max-width: 960px) {
+      nav { padding: 1rem 1.5rem; }
+      nav ul { display: none; }
+      section { padding: 4rem 1.5rem; }
+      #hero { grid-template-columns: 1fr; padding: 5rem 1.5rem 3rem; gap: 2.5rem; }
+      .hero-bg::after { display: none; }
+      .services-grid { grid-template-columns: 1fr; }
+      .service-card.featured-card { grid-column: span 1; grid-template-columns: 1fr; }
+      #zones, #contact { grid-template-columns: 1fr; gap: 3rem; }
+      .pourquoi-grid { grid-template-columns: 1fr; }
+      .avis-grid { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr; gap: 2rem; }
+      .stats-strip { padding: 1.5rem; gap: .5rem; }
+      .stat-divider { display: none; }
+      .zones-list { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .topbar { font-size: .72rem; gap: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Float CTA -->
+<a href="tel:+32495151509" class="float-cta">📞 Appel urgent</a>
+
+<!-- Topbar -->
+<div class="topbar">
+  <div class="topbar-item">⚡ Électricien agréé RGIE</div>
+  <div class="topbar-item">📍 Tubize · Bruxelles · Brabant wallon</div>
+  <div class="topbar-item">📞 <a href="tel:+32495151509">0495 15 15 09</a></div>
+  <div class="topbar-item">🕐 Urgences 24h/7j</div>
+</div>
+
+<!-- Nav -->
+<nav>
+  <div class="logo">
+    Zitelect
+  </div>
+  <ul>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#zones">Zones</a></li>
+    <li><a href="#pourquoi">À propos</a></li>
+    <li><a href="#avis">Avis</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#contact" class="nav-cta">Devis Gratuit</a></li>
+  </ul>
+</nav>
+
+<!-- Hero -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-badge">⚡ Électricien Agréé — Certification RGIE Belgique</div>
+    <h1 style="font-style: italic;">
+      Électricien —<br>
+      <span class="accent">agréé,</span><br>
+      <span class="outline">réactif, fiable</span>
+    </h1>
+    <p class="hero-desc">
+      Électricien agréé basé à Tubize. Dépannage 24h/7j, mise en conformité RGIE et rénovation électrique — devis gratuit sous 2h.
+    </p>
+    <div class="hero-actions">
+      <a href="tel:+32495151509" class="btn-primary">📞 0495 15 15 09</a>
+      <a href="#contact" class="btn-outline">Devis gratuit →</a>
+    </div>
+  </div>
+  <div class="hero-panel">
+    <div class="hero-card featured">
+      <span class="hero-card-icon">🚨</span>
+      <h3>Urgence électrique ?</h3>
+      <p>On intervient le jour même — soirs, week-ends et jours fériés inclus.</p>
+    </div>
+    <div class="hero-card">
+      <span class="hero-card-icon">📋</span>
+      <h3>Contrôle de conformité à venir ?</h3>
+      <p>On corrige toutes les infractions. Certificat RGIE obtenu du premier coup.</p>
+    </div>
+    <div class="hero-card">
+      <span class="hero-card-icon">💶</span>
+      <h3>Devis gratuit, prix fixe</h3>
+      <p>Ce que vous signez, c'est ce que vous payez. Aucun frais caché.</p>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Services -->
+<section id="services">
+  <div class="services-header reveal">
+    <div>
+      <div class="section-tag">Nos prestations</div>
+      <h2 class="section-title">Tout ce qu'un<br>électricien peut faire</h2>
+    </div>
+    <p class="section-sub">Dépannage, conformité RGIE, rénovation, petits travaux — Zitelect s'occupe de tout, proprement et aux normes.</p>
+  </div>
+  <div class="services-grid reveal reveal-delay">
+
+    <div class="service-card featured-card">
+      <div>
+        <span class="service-icon">🚨</span>
+        <div class="service-name">Dépannage Électrique</div>
+        <p class="service-desc">Intervention rapide pour localiser la panne, sécuriser votre installation et remettre le courant — 7j/7, soirs et week-ends inclus.</p>
+        <ul class="service-list" style="margin-top:.8rem;">
+          <li>Panne de courant totale ou sur un seul circuit</li>
+          <li>Disjoncteur ou différentiel qui saute en boucle</li>
+          <li>Court-circuit, surcharge ou surtension</li>
+          <li>Tableau électrique défectueux, chaud ou qui claque</li>
+          <li>Prise, interrupteur ou point électrique hors service</li>
+          <li>Éclairage défaillant, qui clignote ou qui ne s'allume plus</li>
+          <li>⚠️ Odeur de brûlé, étincelles ou fumée — appelez immédiatement</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <span class="service-icon">📋</span>
+      <div class="service-name">Mise en Conformité RGIE</div>
+      <p class="service-desc">Rapport négatif ou vente immobilière à venir ? On analyse, on corrige et on vous obtient le certificat de conformité — du premier coup.</p>
+      <ul class="service-list">
+        <li>Analyse complète de votre installation</li>
+        <li>Correction de toutes les infractions</li>
+        <li>Préparation avant contrôle électrique</li>
+        <li>Remise en conformité après rapport négatif</li>
+        <li>Remplacement tableau, différentiels, protections</li>
+        <li>Vérification prises de terre & liaisons équipotentielles</li>
+      </ul>
+    </div>
+
+    <div class="service-card">
+      <span class="service-icon">🏗️</span>
+      <div class="service-name">Rénovation Électrique</div>
+      <p class="service-desc">Maison ancienne ou en rénovation ? On remet toute l'installation à neuf — sûre, moderne et conforme aux normes actuelles.</p>
+      <ul class="service-list">
+        <li>Remplacement complet du câblage électrique</li>
+        <li>Nouveau tableau électrique moderne</li>
+        <li>Mise à la terre conforme aux normes</li>
+        <li>Ajout de circuits, prises et points lumineux</li>
+        <li>Adaptation aux nouveaux équipements</li>
+        <li>Mise à jour des plans électriques</li>
+      </ul>
+    </div>
+
+    <div class="service-card">
+      <span class="service-icon">🔌</span>
+      <div class="service-name">Petits Travaux</div>
+      <p class="service-desc">Pas besoin d'un grand chantier. On intervient aussi pour tous les petits besoins électriques — vite et proprement.</p>
+      <ul class="service-list">
+        <li>Ajout de prises et points électriques</li>
+        <li>Raccordement taque vitrocéramique / induction</li>
+        <li>Pose de luminaires, spots et lustres</li>
+        <li>Installation ventilation salle de bain</li>
+        <li>Remplacement interrupteurs et appareillage</li>
+      </ul>
+    </div>
+
+    <div class="service-card">
+      <span class="service-icon">🚗</span>
+      <div class="service-name">Borne de Recharge VE</div>
+      <p class="service-desc">Vous passez à l'électrique ? On installe votre borne à domicile ou en entreprise — sécurisé, conforme, et expliqué clairement.</p>
+      <ul class="service-list">
+        <li>Analyse de la capacité de votre installation</li>
+        <li>Conseil personnalisé sur le choix de borne</li>
+        <li>Installation sécurisée et mise en service</li>
+        <li>Tests de fonctionnement complets</li>
+        <li>Explications claires pour une utilisation autonome</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- Comment ça marche -->
+<section id="processus" style="background: var(--navy2); padding: 6rem 4rem;">
+  <div class="reveal" style="text-align:center; max-width:560px; margin:0 auto 3.5rem;">
+    <div class="section-tag">Simple & rapide</div>
+    <h2 class="section-title">De l'appel<br>au travail terminé</h2>
+    <p class="section-sub">On s'occupe de tout. Vous n'avez qu'à appeler.</p>
+  </div>
+  <div class="process-grid reveal reveal-delay">
+    <div class="process-step">
+      <div class="process-num">01</div>
+      <div class="process-icon">📞</div>
+      <h3>Vous appelez</h3>
+      <p>Par téléphone ou via le formulaire. Réponse sous 2h en journée, immédiate pour les urgences.</p>
+    </div>
+    <div class="process-arrow">→</div>
+    <div class="process-step">
+      <div class="process-num">02</div>
+      <div class="process-icon">🔍</div>
+      <h3>On diagnostique</h3>
+      <p>Diagnostic rapide par téléphone ou sur place. On identifie le problème et on vous explique la solution.</p>
+    </div>
+    <div class="process-arrow">→</div>
+    <div class="process-step">
+      <div class="process-num">03</div>
+      <div class="process-icon">📝</div>
+      <h3>Devis gratuit</h3>
+      <p>Devis détaillé et sans engagement. Rien ne commence sans votre accord.</p>
+    </div>
+    <div class="process-arrow">→</div>
+    <div class="process-step">
+      <div class="process-num">04</div>
+      <div class="process-icon">✅</div>
+      <h3>C'est fait</h3>
+      <p>On intervient dans les délais, on travaille proprement. On part quand c'est parfait.</p>
+    </div>
+  </div>
+  <div class="reveal" style="text-align:center; margin-top:3rem;">
+    <a href="tel:+32495151509" class="btn-primary" style="font-size:1rem; padding:1rem 2.5rem;">📞 Démarrer maintenant — 0495 15 15 09</a>
+  </div>
+</section>
+
+<!-- Zones d'intervention -->
+<section id="zones">
+  <div class="zones-map reveal">
+    <div class="zones-title">📍 Zones d'intervention</div>
+    <div class="zones-list">
+      <div class="zone-pill main"><div class="zone-dot"></div> Tubize (base)</div>
+      <div class="zone-pill"><div class="zone-dot"></div> Bruxelles</div>
+      <div class="zone-pill"><div class="zone-dot"></div> Braine-l'Alleud</div>
+      <div class="zone-pill"><div class="zone-dot"></div> Braine-le-Château</div>
+      <div class="zone-pill"><div class="zone-dot"></div> Nivelles</div>
+      <div class="zone-pill"><div class="zone-dot"></div> Ittre</div>
+      <div class="zone-pill"><div class="zone-dot"></div> Rebecq</div>
+      <div class="zone-pill"><div class="zone-dot"></div> Halle</div>
+      <div class="zone-pill"><div class="zone-dot"></div> Mons</div>
+      <div class="zone-pill"><div class="zone-dot"></div> Charleroi</div>
+      <div class="zone-pill"><div class="zone-dot"></div> Uccle</div>
+      <div class="zone-pill"><div class="zone-dot"></div> Forest</div>
+      <div class="zone-pill"><div class="zone-dot"></div> Anderlecht</div>
+      <div class="zone-pill"><div class="zone-dot"></div> Ixelles</div>
+    </div>
+    <div style="margin-top: 1.2rem; font-size: .78rem; color: var(--muted);">Et tout le Brabant wallon, Brabant flamand & Bruxelles</div>
+  </div>
+  <div class="zones-text reveal reveal-delay">
+    <div class="coverage-tag">🗺️ Large couverture géographique</div>
+    <h2 class="section-title">On vient<br>jusqu'à vous</h2>
+    <p class="section-sub">Basé à Tubize, on couvre tout le Brabant wallon, Bruxelles et ses communes, Halle, Mons et Charleroi. Un doute sur votre commune ? Appelez — on confirme en direct.</p>
+    <div class="rgie-box">
+      <h4>⚡ Qu'est-ce que le RGIE ?</h4>
+      <p>Le RGIE (Règlement Général sur les Installations Électriques) est la norme belge obligatoire pour toute installation électrique. Sans conformité, vous ne pouvez pas vendre votre bien — et vous exposez votre famille à des risques d'incendie ou d'électrocution. Zitelect vous accompagne de A à Z jusqu'au certificat.</p>
+    </div>
+    <div style="margin-top: 2rem;">
+      <a href="tel:+32495151509" class="btn-primary">📞 Confirmer ma zone</a>
+    </div>
+  </div>
+</section>
+
+<!-- Pourquoi Zitelect -->
+<section id="pourquoi">
+  <div class="reveal" style="text-align: center; max-width: 600px; margin: 0 auto;">
+    <div class="section-tag">Pourquoi nous choisir</div>
+    <h2 class="section-title">On fait la différence<br>sur le terrain</h2>
+    <p class="section-sub">Pas de call center, pas de sous-traitant. C'est Zitelect qui décroche, qui se déplace et qui fait le travail.</p>
+  </div>
+  <div class="pourquoi-grid reveal reveal-delay">
+    <div class="pourquoi-card">
+      <div class="pourquoi-icon">⚡</div>
+      <div>
+        <h4>On répond vraiment</h4>
+        <p>Pas de répondeur, pas d'attente interminable. On décroche, on écoute et on intervient — même le soir et le week-end.</p>
+      </div>
+    </div>
+    <div class="pourquoi-card">
+      <div class="pourquoi-icon">📋</div>
+      <div>
+        <h4>Experts RGIE certifiés</h4>
+        <p>La conformité électrique belge, c'est notre spécialité. On connaît chaque norme et on obtient votre certificat du premier coup.</p>
+      </div>
+    </div>
+    <div class="pourquoi-card">
+      <div class="pourquoi-icon">💶</div>
+      <div>
+        <h4>Prix fixe, zéro surprise</h4>
+        <p>Devis gratuit, écrit et signé avant tout travail. Ce que vous acceptez, c'est exactement ce que vous payez.</p>
+      </div>
+    </div>
+    <div class="pourquoi-card">
+      <div class="pourquoi-icon">🛡️</div>
+      <div>
+        <h4>Travail garanti</h4>
+        <p>On intervient dans les règles de l'art et on repart uniquement quand vous êtes satisfait. Chaque intervention est garantie.</p>
+      </div>
+    </div>
+    <div class="pourquoi-card">
+      <div class="pourquoi-icon">🗺️</div>
+      <div>
+        <h4>Artisan local, pas un groupe</h4>
+        <p>Basé à Tubize, vous avez affaire directement à l'électricien qui fait le travail — pas à un intermédiaire.</p>
+      </div>
+    </div>
+    <div class="pourquoi-card">
+      <div class="pourquoi-icon">🧹</div>
+      <div>
+        <h4>Chantier toujours propre</h4>
+        <p>On protège votre logement, on range tout avant de partir. Vous ne voyez que le résultat.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Avis clients Google -->
+<section id="avis" style="padding: 6rem 4rem;">
+
+  <!-- Header -->
+  <div class="reveal" style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:2rem; margin-bottom:3rem;">
+    <div>
+      <div class="section-tag">Avis Google vérifiés</div>
+    </div>
+    <a href="https://maps.app.goo.gl/4GsNJkGHU3A4fub78" target="_blank" class="btn-outline" style="white-space:nowrap;">
+      Laisser un avis ★
+    </a>
+  </div>
+
+  <!-- Score global Google -->
+  <div class="reveal google-score-bar">
+    <div class="google-logo-row">
+      <svg width="22" height="22" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#22c97a" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#22c97a" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.29-8.16 2.29-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+      <span class="google-label">Google Reviews</span>
+      <span class="google-verified">✓ Avis vérifiés</span>
+    </div>
+    <div class="google-score-content">
+      <div class="score-big">
+        <div class="score-number">5.0</div>
+        <div class="score-stars-big">★★★★★</div>
+        <div class="score-count">sur Google Maps</div>
+      </div>
+      <div class="score-bars">
+        <div class="bar-row"><span>5 ★</span><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><span class="bar-n">✓</span></div>
+        <div class="bar-row"><span>4 ★</span><div class="bar-track"><div class="bar-fill" style="width:0%"></div></div><span class="bar-n">—</span></div>
+        <div class="bar-row"><span>3 ★</span><div class="bar-track"><div class="bar-fill" style="width:0%"></div></div><span class="bar-n">—</span></div>
+        <div class="bar-row"><span>2 ★</span><div class="bar-track"><div class="bar-fill" style="width:0%"></div></div><span class="bar-n">—</span></div>
+        <div class="bar-row"><span>1 ★</span><div class="bar-track"><div class="bar-fill" style="width:0%"></div></div><span class="bar-n">—</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Carousel d'avis -->
+  <div class="avis-carousel reveal reveal-delay">
+    <div class="avis-track" id="avisTrack">
+
+      <!-- ✏️ REMPLACEZ CES AVIS PAR VOS VRAIS AVIS GOOGLE -->
+
+      <div class="avis-card-g">
+        <div class="avis-card-top">
+          <div class="avis-avatar-g" style="background:#1a6cb5;">K</div>
+          <div>
+            <div class="avis-name-g">Kenza M.</div>
+            <div class="avis-date-g">il y a 2 semaines</div>
+          </div>
+          <svg class="google-icon-sm" viewBox="0 0 48 48" width="18"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#22c97a" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#22c97a" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.29-8.16 2.29-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+        </div>
+        <div class="avis-stars-g">★★★★★</div>
+        <p class="avis-text-g">Très satisfaite de l'intervention de Zitelect. Rapide, propre et professionnel. Le tableau électrique a été remplacé en une journée. Je recommande sans hésiter !</p>
+      </div>
+
+      <div class="avis-card-g">
+        <div class="avis-card-top">
+          <div class="avis-avatar-g" style="background:#22c97a;">T</div>
+          <div>
+            <div class="avis-name-g">Thomas V.</div>
+            <div class="avis-date-g">il y a 1 mois</div>
+          </div>
+          <svg class="google-icon-sm" viewBox="0 0 48 48" width="18"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#22c97a" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#22c97a" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.29-8.16 2.29-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+        </div>
+        <div class="avis-stars-g">★★★★★</div>
+        <p class="avis-text-g">Mise en conformité RGIE réalisée avant la vente de notre maison. Zitelect a corrigé toutes les infractions rapidement et à un tarif honnête. Certificat obtenu du premier coup !</p>
+      </div>
+
+      <div class="avis-card-g">
+        <div class="avis-card-top">
+          <div class="avis-avatar-g" style="background:#1a3d6b;">N</div>
+          <div>
+            <div class="avis-name-g">Nathalie B.</div>
+            <div class="avis-date-g">il y a 1 mois</div>
+          </div>
+          <svg class="google-icon-sm" viewBox="0 0 48 48" width="18"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#22c97a" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#22c97a" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.29-8.16 2.29-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+        </div>
+        <div class="avis-stars-g">★★★★★</div>
+        <p class="avis-text-g">Dépannage en urgence un samedi soir. Intervention en moins d'une heure, problème résolu rapidement. Très professionnel et rassurant. Merci Zitelect !</p>
+      </div>
+
+      <div class="avis-card-g">
+        <div class="avis-card-top">
+          <div class="avis-avatar-g" style="background:#22c97a; color:#0b1f3a;">M</div>
+          <div>
+            <div class="avis-name-g">Marc D.</div>
+            <div class="avis-date-g">il y a 2 mois</div>
+          </div>
+          <svg class="google-icon-sm" viewBox="0 0 48 48" width="18"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#22c97a" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#22c97a" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.29-8.16 2.29-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+        </div>
+        <div class="avis-stars-g">★★★★★</div>
+        <p class="avis-text-g">Installation d'une borne de recharge pour ma voiture électrique. Travail soigné, explications claires sur le fonctionnement. Très content du résultat, je recommande !</p>
+      </div>
+
+      <div class="avis-card-g">
+        <div class="avis-card-top">
+          <div class="avis-avatar-g" style="background:#1a6cb5;">S</div>
+          <div>
+            <div class="avis-name-g">Sophie R.</div>
+            <div class="avis-date-g">il y a 3 mois</div>
+          </div>
+          <svg class="google-icon-sm" viewBox="0 0 48 48" width="18"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#22c97a" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#22c97a" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.29-8.16 2.29-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+        </div>
+        <div class="avis-stars-g">★★★★★</div>
+        <p class="avis-text-g">Rénovation électrique complète de notre appartement. Devis clair, délais respectés, travail impeccable. Zitelect mérite vraiment ses 5 étoiles !</p>
+      </div>
+
+    </div>
+
+    <!-- Nav carousel -->
+    <div class="carousel-nav">
+      <button class="carousel-btn" id="prevBtn" onclick="slideAvis(-1)">←</button>
+      <div class="carousel-dots" id="carouselDots"></div>
+      <button class="carousel-btn" id="nextBtn" onclick="slideAvis(1)">→</button>
+    </div>
+  </div>
+
+  <!-- CTA Google -->
+  <div class="reveal" style="margin-top:2.5rem; display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;">
+    <a href="https://maps.app.goo.gl/4GsNJkGHU3A4fub78" target="_blank" class="google-cta-btn">
+      <svg viewBox="0 0 48 48" width="20"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#22c97a" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#22c97a" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.29-8.16 2.29-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+      Voir tous les avis Google
+    </a>
+    <a href="https://maps.app.goo.gl/4GsNJkGHU3A4fub78" target="_blank" class="btn-outline">
+      ✏️ Laisser un avis
+    </a>
+  </div>
+
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="reveal" style="text-align: center; max-width: 560px; margin: 0 auto;">
+    <div class="section-tag">FAQ</div>
+  </div>
+  <div class="faq-wrap reveal reveal-delay">
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        Intervenez-vous vraiment en urgence la nuit et le week-end ?
+        <span class="faq-chevron">▼</span>
+      </button>
+      <div class="faq-a">Oui, sans exception. Zitelect est disponible 24h/7j pour les urgences électriques — nuits, week-ends et jours fériés inclus. Une panne électrique peut être dangereuse : on ne vous laisse pas sans solution. Appelez le 0495 15 15 09 à toute heure.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        Mon installation est ancienne. Dois-je tout refaire avant de vendre ?
+        <span class="faq-chevron">▼</span>
+      </button>
+      <div class="faq-a">Pas forcément tout. Zitelect commence toujours par une analyse complète de votre installation pour identifier uniquement les infractions à corriger selon le RGIE. Souvent, il suffit de corriger certains points précis pour obtenir le certificat de conformité. On vous présente un devis clair avant tout travail.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        Combien coûte un devis ? Y a-t-il des frais de déplacement ?
+        <span class="faq-chevron">▼</span>
+      </button>
+      <div class="faq-a">Le devis est entièrement gratuit et sans engagement. Les conditions de déplacement sont précisées lors de votre premier contact. Il n'y a aucune facturation cachée : tout est transparent dès le début.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        Quel est le délai d'intervention pour un dépannage normal (non urgent) ?
+        <span class="faq-chevron">▼</span>
+      </button>
+      <div class="faq-a">Pour un dépannage non urgent, on vise généralement une intervention dans les 24 à 48h selon notre planning. Pour les situations urgentes (plus de courant, risque électrique), on se déplace le jour même — souvent en quelques heures.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        Vous intervenez aussi pour les entreprises et commerces ?
+        <span class="faq-chevron">▼</span>
+      </button>
+      <div class="faq-a">Oui, Zitelect intervient autant pour les particuliers que pour les professionnels : commerces, bureaux, entrepôts, restaurants. Installation de prises industrielles, tableaux divisionnaires, éclairage professionnel, bornes de recharge pour flotte — on s'adapte à votre besoin.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        Dans quelles communes intervenez-vous exactement ?
+        <span class="faq-chevron">▼</span>
+      </button>
+      <div class="faq-a">Basé à Tubize, Zitelect couvre tout le Brabant wallon (Braine-l'Alleud, Braine-le-Château, Nivelles, Ittre, Rebecq), Bruxelles et ses communes (Uccle, Forest, Anderlecht, Ixelles), Halle, Mons et Charleroi. Vous n'êtes pas sûr ? Appelez-nous, on confirme en direct.</div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+  <div class="reveal">
+    <div class="section-tag">Contact</div>
+    <h2 class="section-title">Décrivez votre<br>besoin</h2>
+    <p class="section-sub">On vous rappelle sous 2h. Pour une urgence, appelez directement — on répond à toute heure.</p>
+
+    <div style="margin-top: 2rem;">
+      <div class="contact-card">
+        <div class="contact-icon">📞</div>
+        <div>
+          <h4>Urgence ou devis rapide</h4>
+          <p><a href="tel:+32495151509"><strong>0495 15 15 09</strong></a><br><small style="color:var(--muted)">Disponible 24h/7j — on décroche vraiment</small></p>
+        </div>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">📍</div>
+        <div>
+          <h4>Zone d'intervention</h4>
+          <p>Tubize et tout le Brabant wallon<br><small style="color:var(--muted)">Bruxelles · Halle · Mons · Charleroi</small></p>
+        </div>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">🕐</div>
+        <div>
+          <h4>Horaires bureau</h4>
+          <p>Lun – Sam : 7h00 → 19h00<br><small style="color:var(--muted)">Urgences 24h/7j, week-end et jours fériés</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="reveal reveal-delay">
+    <form action="https://formspree.io/f/xpwzgkvj" method="POST" onsubmit="handleSubmit(event)">
+      <input type="hidden" name="_subject" value="Nouvelle demande via Zitelect.be"/>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Prénom</label>
+          <input type="text" name="prenom" placeholder="Jean" required/>
+        </div>
+        <div class="form-group">
+          <label>Nom</label>
+          <input type="text" name="nom" placeholder="Dupont" required/>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Téléphone</label>
+          <input type="tel" name="telephone" placeholder="0495 00 00 00" required/>
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" name="email" placeholder="jean@email.be" required/>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Votre commune</label>
+        <input type="text" name="commune" placeholder="Tubize, Braine-l'Alleud, Bruxelles…"/>
+      </div>
+      <div class="form-group">
+        <label>Type de prestation</label>
+        <select name="service" required>
+          <option value="">Sélectionnez un service…</option>
+          <option>🚨 Dépannage électrique urgent</option>
+          <option>📋 Mise en conformité RGIE</option>
+          <option>🏗️ Rénovation électrique complète</option>
+          <option>⚡ Remplacement tableau électrique</option>
+          <option>🔌 Petits travaux (prises, luminaires…)</option>
+          <option>🚗 Borne de recharge véhicule électrique</option>
+          <option>❓ Autre / Je ne sais pas encore</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Décrivez votre besoin</label>
+        <textarea name="message" placeholder="Ex : Je vends ma maison et j'ai reçu un rapport de contrôle négatif. Mon installation date de 1985. J'ai besoin d'un devis pour la mise en conformité…"></textarea>
+      </div>
+      <div class="form-group">
+        <label>Pièce jointe <span style="color:var(--muted); font-weight:400; text-transform:none; letter-spacing:0;">(rapport de contrôle, photo, document…)</span></label>
+        <label class="file-upload-btn" for="fileInput">
+          📎 Joindre un fichier
+          <span class="file-name" id="fileName">Aucun fichier sélectionné</span>
+        </label>
+        <input type="file" id="fileInput" name="attachment" accept=".pdf,.jpg,.jpeg,.png,.doc,.docx" style="display:none;" onchange="updateFileName(this)"/>
+      </div>
+      <button type="submit" class="btn-primary" style="width:100%; justify-content:center; font-size:1rem; padding:.95rem;">
+        ⚡ Envoyer ma demande
+      </button>
+      <p style="font-size:.75rem; color:var(--muted); margin-top:.9rem; text-align:center;">✓ Réponse sous 2h &nbsp;·&nbsp; ✓ Devis 100% gratuit &nbsp;·&nbsp; ✓ Sans engagement</p>
+      <div id="formSuccess" style="display:none; margin-top:1rem; background:rgba(14,165,100,.1); border:1px solid var(--accent); border-radius:8px; padding:1rem; text-align:center; color:var(--accent); font-weight:600;">
+        ✅ Message envoyé ! Zitelect vous contactera sous 2h.
+      </div>
+    </form>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-logo">
+        Zitelect
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Services</h5>
+      <ul>
+        <li>Dépannage urgent 24h/7j</li>
+        <li>Mise en conformité RGIE</li>
+        <li>Rénovation électrique</li>
+        <li>Tableau électrique</li>
+        <li>Borne de recharge VE</li>
+        <li>Petits travaux électriques</li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="tel:+32495151509">📞 0495 15 15 09</a></li>
+        <li>📍 Tubize, Brabant wallon</li>
+        <li>🕐 Lun–Sam : 7h–19h</li>
+        <li>🚨 Urgences 24h/7j</li>
+        <li><a href="#contact">✉️ Formulaire de contact</a></li>
+        <li><a href="https://maps.app.goo.gl/4GsNJkGHU3A4fub78" target="_blank">⭐ Avis Google</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2024–2026 Zitelect — Électricien agréé à Tubize, Belgique</p>
+    <span class="footer-cert">⚡ Agréé RGIE</span>
+    <p>Urgences : <a href="tel:+32495151509" style="color:var(--accent); text-decoration:none; font-weight:700;">0495 15 15 09</a></p>
+  </div>
+</footer>
+
+<script>
+  function updateFileName(input) {
+    const label = document.getElementById('fileName');
+    label.textContent = input.files[0] ? input.files[0].name : 'Aucun fichier sélectionné';
+    label.style.color = input.files[0] ? 'var(--accent)' : '';
+  }
+
+  // ── FORM SUBMIT ──────────────────────────
+  async function handleSubmit(e) {
+    e.preventDefault();
+    const form = e.target;
+    const btn = form.querySelector('button[type="submit"]');
+    btn.textContent = '⏳ Envoi en cours…';
+    btn.disabled = true;
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        form.reset();
+        document.getElementById('formSuccess').style.display = 'block';
+        btn.textContent = '✅ Envoyé !';
+      } else {
+        btn.textContent = '❌ Erreur — réessayez';
+        btn.disabled = false;
+      }
+    } catch {
+      btn.textContent = '❌ Erreur — réessayez';
+      btn.disabled = false;
+    }
+  }
+  (function() {
+    const track = document.getElementById('avisTrack');
+    const dotsContainer = document.getElementById('carouselDots');
+    if (!track) return;
+
+    const cards = track.querySelectorAll('.avis-card-g');
+    const total = cards.length;
+    let current = 0;
+    let perView = window.innerWidth < 700 ? 1 : window.innerWidth < 1000 ? 2 : 3;
+    const maxSlide = Math.max(0, total - perView);
+
+    // Create dots
+    const numDots = maxSlide + 1;
+    for (let i = 0; i < numDots; i++) {
+      const d = document.createElement('div');
+      d.className = 'dot' + (i === 0 ? ' active' : '');
+      d.onclick = () => goTo(i);
+      dotsContainer.appendChild(d);
+    }
+
+    function getCardWidth() {
+      const card = cards[0];
+      const style = window.getComputedStyle(card);
+      return card.offsetWidth + parseInt(style.marginRight || 0) + 24; // 24 = gap
+    }
+
+    function goTo(idx) {
+      current = Math.max(0, Math.min(idx, maxSlide));
+      track.style.transform = `translateX(-${current * getCardWidth()}px)`;
+      dotsContainer.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === current));
+    }
+
+    window.slideAvis = function(dir) { goTo(current + dir); };
+
+    // Auto-slide
+    let timer = setInterval(() => goTo(current < maxSlide ? current + 1 : 0), 5000);
+    track.addEventListener('mouseenter', () => clearInterval(timer));
+    track.addEventListener('mouseleave', () => { timer = setInterval(() => goTo(current < maxSlide ? current + 1 : 0), 5000); });
+
+    window.addEventListener('resize', () => {
+      perView = window.innerWidth < 700 ? 1 : window.innerWidth < 1000 ? 2 : 3;
+      goTo(0);
+    });
+  })();
+
+  // FAQ Toggle
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
